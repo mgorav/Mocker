@@ -8,7 +8,9 @@ totally replace an actual service once the recording is complete.
 
 **Mocker** also support response templating/plugin custom functionality using Groovy. This will explained in detail in section "Mocker Operations"
 
-**NOTE** Mocker use hash key lookup on: URL + HttpMethod + Request to uniquely identify cached response.  
+**NOTE** Mocker use hash key lookup on: URL + HttpMethod + Request to uniquely identify cached response.
+
+**NOTE**  Mocker uses [jpa-eclipse](https://github.com/mgorav/jpa-eclipselink) to configure JPA
 
 **What is Service Virutalization?**
 
