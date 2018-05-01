@@ -10,6 +10,16 @@ totally replace an actual service once the recording is complete.
 
 **NOTE** Mocker use hash key lookup on: URL + HttpMethod + Request to uniquely identify cached response.  
 
+**What is Service Virutalization?**
+
+[In software engineering, service virtualization is a method to emulate the behavior of specific components in 
+heterogeneous component-based applications such as API-driven applications, cloud-based applications and 
+service-oriented architectures. It is used to provide software development and QA/testing teams access to dependent 
+system components that are needed to exercise an application under test (AUT), but are unavailable or 
+difficult-to-access for development and testing purposes. With the behavior of the dependent components "virtualized", 
+testing and development can proceed without accessing the actual live components. Service virtualization is recognized 
+by vendors, industry analysts, and industry publications as being different than mocking.](https://en.wikipedia.org/wiki/Service_virtualization)
+
 
 
 **Prerequisites:**
