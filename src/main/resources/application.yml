@@ -1,0 +1,92 @@
+project:
+  name: application
+  version: 0.1
+  description: application Virtualization Service
+
+info:
+  build:
+    artifact: ${project.artifactId}
+    name: ${project.name}
+    description: ${project.description}
+    version: ${project.version}
+
+server:
+  port: 8090
+  tomcat:
+    max-threads: 20
+
+security:
+  basic:
+    enabled: false
+
+#management endpoints on a separate port
+management:
+  port: 8091
+  security:
+    enabled: false # management port is internal only. no need to secure it.
+
+mocker:
+   tcp:
+    server:
+      port: "7777"
+   target:
+     service:
+      #location: "http://localhost:8080/ws"
+      #location: "http://samples.openweathermap.org"
+      http:
+          location: "http://localhost:20011/"
+      tcp:
+          location:
+            hostname: "localhost"
+            tcpport: 5555
+spring:
+    application:
+      name: application
+    profiles:
+      active: dev
+    jmx: enabled
+    jackson:
+      default-property-inclusion: non_null
+      serialization:
+        indent_output: true
+
+logging:
+  level:
+    org.springframework.jdbc: ERROR
+    org.eclipselink: ERROR
+    com.ingenico.iin.sla: TRACE
+springfox:
+  swagger:
+    path: /mocker/
+  documentation:
+    swagger:
+      v2:
+       path: /mocker/api-docs
+
+
+gm:
+  shared:
+    jpa:
+      properties:
+        eclipselink.cache-usage: CheckCacheThenDatabase
+        eclipselink-logging: false
+        eclipselink-performance.profiler: false
+      datasource:
+        platform: derby
+        initialize: true
+        tomcat:
+          test-on-borrow: true
+          driver-class-name:  org.apache.derby.jdbc.EmbeddedDriver
+          username: app
+          password: ""
+          url: jdbc:derby:jdbc:derby:derby-home/application;
+          max-active: 20
+          min-idle: 10
+          initial-size: 20
+
+#logging:
+#  level:
+#    org.springframework.jdbc: ERROR
+#    org.eclipselink: ERROR
+#    com.ingenico.iin.sla: TRACE
+#    org.flywaydb.core: DEBUG
