@@ -28,7 +28,7 @@ by vendors, industry analysts, and industry publications as being different than
 1. JDK 8
 2. Maven 3.5.0
 3. Lombok (need to be configured in IDE of the choice)
-4. jpa-eclipselink spring boot auto config library
+4. [jpa-eclipselink spring boot auto config library](https://github.com/mgorav/jpa-eclipselink)
 
 ----------
 
