@@ -90,7 +90,7 @@ public class VirtualizationServiceApi<T extends ResponseTemplate> {
             redirectUrl = redirectUrl + "?" + queryString;
         }
 
-        redirectUrl = UrlUtil.getCorrectUrl(redirectUrl);
+        //redirectUrl = UrlUtil.getCorrectUrl(redirectUrl);
 
         String incomingRequestPayload = incomingHttpEntity.getBody();
         String requestHashKey = HashKeyUtil.getHashKey(incomingRequestPayload);
