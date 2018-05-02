@@ -71,6 +71,7 @@ gm:
         eclipselink.cache-usage: CheckCacheThenDatabase
         eclipselink-logging: false
         eclipselink-performance.profiler: false
+        eclipselink-async-commitcount: 1000
       datasource:
         platform: derby
         initialize: true

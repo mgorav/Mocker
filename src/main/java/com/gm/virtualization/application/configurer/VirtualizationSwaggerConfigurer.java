@@ -19,7 +19,7 @@ import static springfox.documentation.spi.DocumentationType.SWAGGER_2;
  */
 @Configuration
 @EnableSwagger2
-@ComponentScan("com.ingenico.virtualization.api")
+@ComponentScan("com.gm.virtualization.api")
 public class VirtualizationSwaggerConfigurer {
 
     @Bean
