@@ -51,7 +51,7 @@ public class VirtualizationFilter extends OncePerRequestFilter {
                 name = handlerMethod.getMethod().getName();
             }
 
-
+            response.reset();
             chain.doFilter(request, response);
         } catch (Exception e) {
             log.error(e);
