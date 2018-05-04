@@ -6,7 +6,7 @@ When a call to actual service is made via **Mocker**, this service first time go
 subsequent calls will be addressed by **Mocker**. This is also referred to as recording of a call. As a result, **Mocker** can
 totally replace an actual service once the recording is complete.
 
-**Mocker** also support response templating/plugin custom functionality using Groovy. This will explained in detail in section "Mocker Operations"
+**Mocker** also support response templating/plugin custom functionality using Groovy along with ability to record scenario. This will explained in detail in section "Mocker Operations"
 
 **NOTE** Mocker use hash key lookup on: URL + HttpMethod + Request to uniquely identify cached response.
 
