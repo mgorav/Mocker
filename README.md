@@ -1,6 +1,8 @@
 **Mocker**
 A Mocker is a Spring Boot based service. This service provide abilities to virtualize (mock) another webservice 
-(SOAP/REST) or TCP based communication. It also provides ability to record & play scenario and hence provide ability to virutalize a service if it's not even built.
+(SOAP/REST) or TCP based communication. It also provides ability to record & play scenario and hence provide ability to virutalize a service if it's not even built. The below picture shows **Mocker** diagramatically:
+
+ ![alt text](./MockerVirtualization.jpg)
 
 When a call to actual service is made via **Mocker**, this service first time goes to the actual service and all
 subsequent calls will be addressed by **Mocker**. This is also referred to as recording of a call. As a result, **Mocker** can
