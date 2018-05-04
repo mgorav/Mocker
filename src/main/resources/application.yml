@@ -34,7 +34,7 @@ mocker:
       #location: "http://localhost:8080/ws"
       #location: "http://samples.openweathermap.org"
       http:
-          location: "http://localhost:20011"
+          location: "http://samples.openweathermap.org"
       tcp:
           location:
             hostname: "localhost"
