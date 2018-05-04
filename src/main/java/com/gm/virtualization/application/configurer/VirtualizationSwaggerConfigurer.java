@@ -44,8 +44,8 @@ public class VirtualizationSwaggerConfigurer {
         return new ApiInfoBuilder()
                 .title("application")
                 .description(description)
-                .license("Ingenico")
-                .licenseUrl("https://www.ingenico.com/")
+                .license("GM")
+                .licenseUrl("http://architectcorner.blogspot.nl")
                 .version("0.1")
                 .build();
     }
