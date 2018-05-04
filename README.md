@@ -46,6 +46,8 @@ available operations:
 
 http://[hostName]:[portNumber]/swagger-ui.html
 
+ ![alt text](./MockerSwagger.png) 
+
 Following operations are supported by **Mocker**
 1 Configure **target*. By "target" in *Mocker** means the actual location of the service being virtualized/mocked
   ````java
