@@ -67,6 +67,7 @@ springfox:
 gm:
   shared:
     jpa:
+      enabled: true
       properties:
         eclipselink.cache-usage: CheckCacheThenDatabase
         eclipselink-logging: false
