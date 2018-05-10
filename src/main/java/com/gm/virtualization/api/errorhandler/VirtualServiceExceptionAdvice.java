@@ -8,7 +8,7 @@ import static java.lang.String.format;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 /**
- * Generic {@link com.ingenico.virtualization.api.VirtualizationServiceApi} exception handling
+ * Generic {@link com.gm.virtualization.api.VirtualizationServiceApi} exception handling
  */
 @ControllerAdvice
 public class VirtualServiceExceptionAdvice {
