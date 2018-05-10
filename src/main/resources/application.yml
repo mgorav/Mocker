@@ -68,11 +68,24 @@ gm:
   shared:
     jpa:
       enabled: true
+      async-persistence: true
       properties:
         eclipselink.cache-usage: CheckCacheThenDatabase
         eclipselink-logging: false
         eclipselink-performance.profiler: false
         eclipselink-async-commitcount: 1000
+        eclipselink.logging.timestamp: true
+        eclipselink.logging.session: true
+        eclipselink.logging.connection: true
+        eclipselink.logging.thread: true
+        eclipselink.logging.level.transaction: ALL
+        eclipselink.logging.level.sql: ALL
+        eclipselink.logging.level.event: ALL
+        eclipselink.logging.level.connection: ALL
+        eclipselink.logging.level.query: ALL
+        eclipselink.logging.level.cache: ALL
+        eclipselink.logging.level: ALL
+        eclipselink.logging.parameters: true
       datasource:
         platform: derby
         initialize: true

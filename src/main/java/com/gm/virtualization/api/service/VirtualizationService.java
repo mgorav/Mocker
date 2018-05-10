@@ -13,6 +13,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 /**
  * Application service of {@link VirtualizationServiceApi}
  */
@@ -22,6 +25,8 @@ public class VirtualizationService {
 
     @Autowired
     private ServiceRequestResponseRepository serviceRequestResponseRepository;
+    @PersistenceContext
+    private EntityManager em;
 
     @Getter
     @Setter

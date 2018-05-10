@@ -27,6 +27,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import static com.gm.virtualization.util.UrlUtil.getCorrectUrl;
 import static java.lang.String.format;
 import static org.springframework.http.HttpStatus.OK;
 import static org.springframework.util.StringUtils.isEmpty;
@@ -100,7 +101,7 @@ public class VirtualizationServiceApi<T extends ResponseTemplate> {
 
         // Check it request is configured for templating
         if (serviceRequestResponse == null) {
-            ServiceRequestResponse templatingRequestResponse = virtualizationService.lookUpGroovyRequestResponse(UrlUtil.getCorrectUrl(redirectUrl), httpRequest.getMethod());
+            ServiceRequestResponse templatingRequestResponse = virtualizationService.lookUpGroovyRequestResponse(getCorrectUrl(redirectUrl), httpRequest.getMethod());
 
             if (templatingRequestResponse != null) {
                 serviceRequestResponse = templatingRequestResponse;
@@ -286,7 +287,7 @@ public class VirtualizationServiceApi<T extends ResponseTemplate> {
     ServiceRequestResponse viewScenario(@RequestParam("url") String url) {
 
 
-        return virtualizationService.findByUrl(UrlUtil.getCorrectUrl(url));
+        return virtualizationService.findByUrl(getCorrectUrl(url));
     }
 
     // ~~~ protected/private utility methods abstraction
