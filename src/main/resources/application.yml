@@ -33,6 +33,7 @@ mocker:
      service:
       #location: "http://localhost:8080/ws"
       #location: "http://samples.openweathermap.org"
+      # Test URL http://samples.openweathermap.org/data/2.5/weather?q=delhi,ind&appid=b6907d289e10d714a6e88b30761fae22
       http:
           location: "http://samples.openweathermap.org"
       tcp:
@@ -68,12 +69,15 @@ gm:
   shared:
     jpa:
       enabled: true
-      async-persistence: true
+      spring:
+        rest:
+          enabled: true
+#      async-persistence: false
       properties:
         eclipselink.cache-usage: CheckCacheThenDatabase
         eclipselink-logging: false
         eclipselink-performance.profiler: false
-        eclipselink-async-commitcount: 1000
+#        eclipselink-async-commitcount: 1000
         eclipselink.logging.timestamp: true
         eclipselink.logging.session: true
         eclipselink.logging.connection: true
