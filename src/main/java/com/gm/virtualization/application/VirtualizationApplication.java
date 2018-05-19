@@ -19,7 +19,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableConfigurationProperties
 @EnableAutoConfiguration()
 @EnableJpaRepositories(basePackageClasses = ServiceRequestResponseRepository.class)
-@Import({VirtualizationSwaggerConfigurer.class, VirtualizationServiceConfiguration.class, VirtualizationTcpGatewayConfig.class})
+//@Import({VirtualizationSwaggerConfigurer.class, VirtualizationServiceConfiguration.class, VirtualizationTcpGatewayConfig.class})
 public class VirtualizationApplication {
 
     public static void main(String[] args) {
