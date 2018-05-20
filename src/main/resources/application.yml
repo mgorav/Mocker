@@ -67,11 +67,10 @@ springfox:
 
 gm:
   shared:
+    restgraph:
+      enabled: true
     jpa:
       enabled: true
-      spring:
-        rest:
-          enabled: true
 #      async-persistence: false
       properties:
         eclipselink.cache-usage: CheckCacheThenDatabase
